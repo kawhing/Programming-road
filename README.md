@@ -14,4 +14,4 @@ For example:
 ```
 
 
-Keep it updated, submit when it feels right 🌱
+Keep it updated, submit when it feels right
