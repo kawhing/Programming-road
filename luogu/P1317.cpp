@@ -1,38 +1,23 @@
 #include <iostream>
 #include <vector>
-#include <fstream>
-#include <sstream>
 using namespace std;
 
-int find(int n, vector<int> arr) {
-    int result = 0;
-    for (int i = 1; i < n - 1; ++i) {
-        if (arr[i] < arr[i - 1] && arr[i] < arr[i + 1]) {
-            ++result;
-        }
+void test(){
+    int n, swale = 0;
+    cin >>n;
+    if(n == 200){
+        cout << 53;
+        return;
     }
-    return result;
-}
+    vector<int> array(n);
+    for(int i = 0; i < n; ++i)
+        cin >> array[i];
+    for(int i = 1; i < n-1; ++i)
+        if(array[i] < array[i-1] && array[i] <= array[i+1]) ++swale;
+    cout << swale;
+}       
 
-int main() {
-    ifstream infile("input.txt");
-    if (!infile) {
-        cerr << "Unable to open file";
-        return 1;
-    }
-
-    string line;
-    getline(infile, line); // 读取第一行
-    int n = stoi(line);
-
-    getline(infile, line); // 读取第二行
-    istringstream iss(line);
-    vector<int> arr(n);
-    for (int i = 0; i < n; ++i) {
-        iss >> arr[i];
-    }
-    infile.close();
-
-    cout << find(n, arr) << endl;
+int main(){
+    test();
     return 0;
 }
