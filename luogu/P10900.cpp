@@ -3,9 +3,9 @@
 using namespace std;
 
 bool isShiYI(long long num){
-    for(int i = 1; i < num; ++i){
+    for(long long i = 1; i < num; ++i){
         long long sum = 0;
-        for(long long j = 1; j < num; ++j){
+        for(long long j = i; j < num; ++j){
             sum += j;
             if(sum == num && j-i >= 1) return true;
             else if(sum > num || (sum == num && j == i)) continue; 
