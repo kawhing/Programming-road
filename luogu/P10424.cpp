@@ -1,20 +1,29 @@
 #include <iostream>
 #include <string>
 using namespace std;
-
-bool test(string s){
-    for(int i = s.size()-1; i >= 0; --i){
-        if(!(((s.size()-i)%2 == 1 && s[i] % 2 == 1) || ((s.size()-i)%2 == 0 && s[i]%2 == 0))) return false;
-    }
-    return true;
-}
-int main(){
-    int n, count = 0;
+// Quetiosn number C (good number) the 15th lanqiao Cup 
+void test(){
+    long long n, goodNum = 0;
     cin >> n;
     for(int i = 1; i <= n; ++i){
-        string s = to_string(i);
-        if(test(s)) ++count;
+        string str = to_string(i);
+        long long strSize = str.size();
+        long long count = 0;
+        for(int j = strSize-1; j >= 0; --j){
+            if((strSize-j)%2 == 0){
+                if(str[j] % 2 == 0) ++count;
+                else break;
+            }else{
+                if(str[j]%2 == 1) ++count;
+                else break;
+            }
+        }
+        if(count == strSize) ++goodNum;
     }
-    cout << count << endl;
+    cout << goodNum << endl;
+}
+
+int main(){
+    test();
     return 0;
 }
