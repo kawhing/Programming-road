@@ -26,4 +26,4 @@ env/
 node_modules/
 
 # 忽略txt文件
-.txt
+*.txt
