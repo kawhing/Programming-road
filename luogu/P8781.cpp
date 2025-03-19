@@ -1,46 +1,39 @@
 #include <iostream>
 #include <vector>
 using namespace std;
+// not rearly reslove
+void addHigh(vector<int>& array, vector<int>& max){
+    for(int i = 0; i < array.size(); ++i){
+        ++array[i];
+        if(array[i] > max[i]){
+            max[i] = array[i];
+        }
+    }
+}
 
-int main(){
+void test(){
     int n;
     cin >> n;
-    vector<vector<int>> pretree(n*3-2, vector<int>(n, 0));
-    vector<vector<int>> endtree(n*3-2, vector<int>(n, 0));
+    vector<int> array(n, 0);
+    vector<int> max(n, 0);
+    int dir = 1;
+    int index = 0;
+    for(int day = 0; day < 2*(n-1)*n; ++day){
+        addHigh(array, max);
+        array[index] = 0;
+        index += dir;
+        if(index == n-1 || index == 0)
+            dir = -dir;
+        
+    }
+
     for(int i = 0; i < n; ++i){
-        if(i == 0){
-            for(int j = 0; j < n; ++j){
-                pretree[i][j] = 1;
-                endtree[i][j] = 1;
-            }
-            endtree[0][0] = 0;
-        }else{
-            for(int j = 0; j < n; ++j){
-                pretree[i][j] = endtree[i-1][j] + 1;
-                endtree[i][j] = pretree[i][j];
-            }
-            endtree[i][n-(i+1)%n] = 0;
-        }
-    } 
-    for(int i = n; i < 2*n-1; ++i){
-        for(int j = 0; j < n; ++j){
-            pretree[i][j] = endtree[i-1][j] + 1;
-            endtree[i][j] = pretree[i][j];
-        }
-        endtree[i][i] = 0;
+        cout << max[i] << endl;
     }
-    for(int i = 2*n-1; i < 3*n-2; ++i){
-        for(int j = 0; j < n; ++j){
-            pretree[i][j] = endtree[i-1][j] + 1;
-            endtree[i][j] = pretree[i][j];
-        }
-        endtree[i][(i-1)%3] = 0;
-    }  
-    for(int i = 0; i < n*3-2; ++i){
-        for(int j = 0; j < n; ++j){
-            cout << pretree[i][j] << " ";
-        }
-        cout << endl;
-    }
+    
+}
+
+int main(){
+    test();
     return 0;
 }
