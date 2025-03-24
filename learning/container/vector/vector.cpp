@@ -21,6 +21,9 @@ void test01(){
     // n个elem方式构造
     vector<int>v3(10, 100);
     printvector(v3);
+    // 拷贝构造
+    vector<int>v4(v3);
+    printvector(v3);
 }
 
 int main(){
