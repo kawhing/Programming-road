@@ -28,6 +28,10 @@ void test01(){
     string str6;
     str6.assign(str5);
     cout << "str6 = " << str6 << endl;
+
+    string str7;
+    str7.assign(10, 'w');
+    cout << "str7 = " << str7 << endl;
 }
 
 int main(){
