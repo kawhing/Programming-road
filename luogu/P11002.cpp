@@ -2,7 +2,7 @@
 #include <string>
 #include <cmath>
 using namespace std;
-
+// 神奇闹钟
 void get_date(string date){
     //cout << date << endl;
     string part1, part2, part3;
