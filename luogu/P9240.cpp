@@ -1,35 +1,37 @@
 #include <iostream>
 #include <vector>
-#include <string>
+#include <algorithm>
 using namespace std;
-int findMax(vector<vector<int>> v){
-    int max = 0;
-    for(int i = 1; i < v.size(); ++i){
-        if(v[i][0] >= v[max][0]){
-            max = i;
-        }
-    }
-    return v[max][0];
-}
-int findMin(vector<vector<int>> v){
-    int min = 0;
-    for(int i = 1; i < v.size(); ++i){
-        if(v[i][0] <= v[min][0]){
-            min = i;
-        }
-    }
-    return v[min][0];
-}
-int main(){
-    int n;
+
+void test(){
+    long long n = 3;
     cin >> n;
-    vector<vector<int>> v(n, vector<int>(2));
+    // vector<vector<int>> array{
+    //     {75, 3},
+    //     {53, 2},
+    //     {59, 2}
+    // };
+    int max_temp = 0;
+    vector<vector<int>> array(n, vector<int>(2));
     for(int i = 0; i < n; ++i){
-        cin >> v[i][0] >> v[i][1];
-        v[i][0] = v[i][0] / v[i][1];
+        cin >> array[i][0] >> array[i][1];
+        max_temp = array[i][0] > max_temp ? array[i][0]:max_temp;
     }
-    int max = findMax(v);
-    int min = findMin(v);
-    cout << min << " " << max << endl;
+    vector<int> v;
+    for(long long i = 2; i < max_temp; ++i){
+        int count = 0;
+        for(long long j = 0; j < n; ++j){
+            if(array[j][0]/i == array[j][1]) ++count;
+            else break;
+        }
+        if(count == n) v.push_back(i);
+    }
+    int temp = v.size()-1;
+    sort(v.begin(), v.end());
+    cout << v[0] << " " << v[temp] << endl;
+}
+
+int main(){
+    test();
     return 0;
 }
