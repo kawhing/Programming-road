@@ -11,5 +11,6 @@ For example:
 ```bash
 https://www.luogu.com.cn/problem/P11041
 ```
-for nowcode, links are in the files 
+for nowcode, links are in the files.
+
 Keeping it updated, submitting as inspiration strikes!
