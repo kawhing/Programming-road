@@ -1,33 +1,19 @@
-#include <iostream>
-#include <string>
-#include <vector>
-#include <algorithm>
+#include <bits/stdc++.h>
 using namespace std;
+typedef long long ll;
 
-long long sum(vector<long long> nums, long long start, long long end){
-	long long sum = 0;
-	for(long long i = start; i <= end; ++i){
-		sum += nums[i];
-	}
-	return sum;
-}
-void test(){
-	long long n, k, k_spaces = 0;
-	cin >> n >> k;
-	vector<long long> nums(n);
-	for(long long i = 0; i < n; ++i){
-		cin >> nums[i];
-	}
-	for(long long i = 0; i < n; ++i){
-		for(long long j = i; j < n; ++j){
-			if(sum(nums, i, j) % k == 0){
-				++k_spaces;
-			}
-		}
-	}
-	cout << k_spaces << endl;
-} 
 int main(){
-	test();
+	ll n, k;
+	cin >> n >> k;
+	vector<ll> a(n+1), sum(n+1), mp(k, 0);
+	for(ll i = 1; i <= n; ++i) cin >> a[i];
+	mp[0] = 1;
+	ll ans = 0;
+	for(ll i = 1; i <= n; ++i){
+		sum[i] = (sum[i-1]+a[i]) % k;
+		ans += mp[sum[i]];
+		mp[sum[i]]++;
+	}
+	cout << ans << endl;
 	return 0;
 }
