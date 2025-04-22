@@ -26,7 +26,7 @@ void test01(){
     //重新指定容器大小
     v1.resize(15, 100);
     printvector(v1);// 如果指定的大小比原来的长会用0填充
-    //
+    //如果指定的大小比原来的短会删除多余的元素
     v1.resize(5);
     printvector(v1);
 }
