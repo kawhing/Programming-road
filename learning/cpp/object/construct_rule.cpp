@@ -51,6 +51,6 @@ void test03(){
 }
 int main(){
     // test01();
-    test03(p);
+    test03();
     return 0;
 }
