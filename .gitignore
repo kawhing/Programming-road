@@ -3,6 +3,7 @@
 Thumbs.db
 
 # 忽略IDE的配置文件
+cmake-build-debug/
 out/
 .vscode/
 .idea/
