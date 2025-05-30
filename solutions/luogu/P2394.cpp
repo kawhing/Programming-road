@@ -1,11 +1,7 @@
-#include <bits/stdc++.h>
-using namespace std;
-void solve(){
-    double x;
-    cin >> x;
-    cout << fixed << setprecision(8) << x/23 << endl;
-}
+#include <cstdio>
 int main(){
-    solve();
+    long double x;
+    scanf ( "%15Lf", &x );
+    printf ( "%.8Lf", x / 23 );
     return 0;
 }
