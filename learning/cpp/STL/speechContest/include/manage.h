@@ -7,6 +7,7 @@ class Manage{
         Manage();
         //展示菜单
         void showMenu();
+        void exitSystem();
         //析构函数
         ~Manage();
 };
