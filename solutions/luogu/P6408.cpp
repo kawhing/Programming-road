@@ -10,7 +10,7 @@ void solve(){
     int ans = 0;
     for(int i = 0; i < 5; ++i){
         int sum = 0;
-        for(int j = 0; j < 5; ++j){
+        for(int j = 0; j < 4; ++j){
             sum += scores[i][j];
         }
         scores[i][0] = sum;
