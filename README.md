@@ -1,6 +1,6 @@
-# Programming road — Programming Learning and Growth Record
+# Programming-road — Programming Learning and Growth Record
 
-Welcome to Programming road, a repository for recording personal programming learning and growth. Through this repository, I will share the challenges I encountered, the problems I solved, the technical explorations, and self-reflection in the process of learning programming.
+Welcome to Programming-road, a repository for recording personal programming learning and growth. Through this repository, I will share the challenges I encountered, the problems I solved, the technical explorations, and self-reflection in the process of learning programming.
 
 ## Main Content
 
