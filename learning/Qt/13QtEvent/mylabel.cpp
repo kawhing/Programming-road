@@ -35,3 +35,13 @@ void myLabel::mouseReleaseEvent(QMouseEvent *ev){
         qDebug() << str;
     }
 }
+bool myLabel::event(QEvent *e){
+    if(e->type() == QEvent::MouseButtonPress){
+        QMouseEvent *ev = static_cast<QMouseEvent *>(e);
+        QString str = QString("Event函数中::鼠标按下了x = %1 y = %2 globalX = %3 globalY = %4").arg(ev->x()).arg(ev->y()).arg(ev->globalX()).arg(ev->globalY());
+        qDebug() << str;
+
+        return true;//true 代表用户自己处理这个事件， 不向下分发
+    }
+    return QLabel::event(e);
+}
