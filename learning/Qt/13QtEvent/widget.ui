@@ -16,8 +16,8 @@
   <widget class="myLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>70</y>
+     <x>100</x>
+     <y>20</y>
      <width>231</width>
      <height>81</height>
     </rect>
@@ -32,8 +32,8 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>220</y>
+     <x>100</x>
+     <y>120</y>
      <width>241</width>
      <height>61</height>
     </rect>
@@ -48,8 +48,8 @@
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>120</x>
-     <y>320</y>
+     <x>100</x>
+     <y>200</y>
      <width>241</width>
      <height>61</height>
     </rect>
@@ -59,6 +59,38 @@
    </property>
    <property name="text">
     <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>280</y>
+     <width>241</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Sunken</enum>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnPause">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>310</y>
+     <width>80</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>暂停</string>
    </property>
   </widget>
  </widget>
