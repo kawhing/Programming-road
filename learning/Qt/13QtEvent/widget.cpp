@@ -21,6 +21,24 @@ Widget::Widget(QWidget *parent)
     connect(ui->btnPause, &QPushButton::clicked, [=](){
         timer->stop();
     });
+    //给label1 安装事件过滤器
+    //步骤一 安装事件过滤器
+    ui->label1->installEventFilter(this);
+}
+
+//步骤二 重写事件过滤器的事件
+bool Widget::eventFilter(QObject *obj, QEvent *e){
+    if(obj == ui->label1){
+        if(e->type() == QEvent::MouseButtonPress){
+            QMouseEvent *ev = static_cast<QMouseEvent *>(e);
+            QString str = QString("事件过滤器中::鼠标按下了x = %1 y = %2 globalX = %3 globalY = %4").arg(ev->x()).arg(ev->y()).arg(ev->globalX()).arg(ev->globalY());
+            qDebug() << str;
+
+            return true;//true 代表用户自己处理这个事件， 不向下分发
+        }
+    }
+    //其他默认处理
+    return QWidget::eventFilter(obj, e);
 }
 
 Widget::~Widget()

@@ -3,6 +3,8 @@
 
 #include <QWidget>
 #include <QTimer>
+#include <QMouseEvent>
+#include <QDebug>
 QT_BEGIN_NAMESPACE
 namespace Ui { class Widget; }
 QT_END_NAMESPACE
@@ -17,7 +19,8 @@ public:
     //重写定时器事件
     void timerEvent(QTimerEvent *ev);
     int id1, id2, i3;
-
+    //重写事件过滤器的事件
+    bool eventFilter(QObject *, QEvent *);
 private:
     Ui::Widget *ui;
 };
