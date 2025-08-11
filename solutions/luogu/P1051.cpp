@@ -15,7 +15,6 @@ void solve(){
     int n, rewardsSum = 0;//学生的总数 获奖总数
     cin >> n;
     vector<Student> reward(n);//每个学生的奖金
-    map<string, int> mp;//记录每个学生名字出现的顺序
     for(int i = 0; i < n; ++i){
         cin >> reward[i].name >> reward[i].semesterScore >> reward[i].classScore >> reward[i].isStuLeader >> reward[i].isWestStu >> reward[i].thesisNum;
         reward[i].index = i;
