@@ -53,7 +53,7 @@ void Manager::addPerson() {
 	else {//添加教师
 		fileName = TEACHER_FILE;
 		tip = "请输入教师职工号：";
-		errorTip = "职工号重复 请重新输入";
+		errorTip = "职工号重复 请重新输入: ";
 	}
 
 	//利用追加的方式 写文件
@@ -84,11 +84,39 @@ void Manager::addPerson() {
 	system("pause");
 	system("cls");
 	ofs.close();
+	
+	//初始化容器
+	this->initVector();
+}
+
+
+void printStudent(const Student &s) {
+	cout << "学号： " << s.Id << "\t姓名： " << s.name << "\t密码： " << s.pwd << endl;
+}
+void printTeacher(const Teacher& t) {
+	cout << "职工号: " << t.empId << "\t姓名: " << t.name << "\t密码: " << t.pwd << endl;
 }
 
 //查看账号
 void Manager::showPerson() {
+	cout << "请选择查看的账号类型：" << endl;
+	cout << "1.查看学生账号" << endl;
+	cout << "2.查看教师账号" << endl;
 
+	int select = 0;//接收用户选择
+	cin >> select;
+	if (select == 1) {
+		//查看学生
+		cout << "当前所有学生账号信息如下：" << endl;
+		for_each(vStu.begin(), vStu.end(), printStudent);
+	}
+	else {
+		//查看老师
+		cout << "当前所有老师账号信息如下：" << endl;
+		for_each(vTea.begin(), vTea.end(), printTeacher);
+	}
+	system("pause");
+	system("cls");
 }
 
 //查看机房信息
