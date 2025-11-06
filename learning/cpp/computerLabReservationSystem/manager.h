@@ -7,6 +7,7 @@
 #include <fstream>
 #include <vector>
 #include <algorithm>
+#include "computerRoom.h"
 
 class Manager : public Identlty{
 public:
@@ -42,4 +43,6 @@ public:
 
 	//检测重复 参数: (传入id, 传入类型) 返回值(true 代表有重复 false代表没有重复)
 	bool checkRepeat(int id, int type);
+	//机房信息
+	vector<ComputerRoom> vCom;
 };
