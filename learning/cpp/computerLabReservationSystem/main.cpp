@@ -8,6 +8,34 @@
 #include "identlty.h"
 using namespace std;
 
+//进入学生子菜单界面
+void studentMenu(Identlty*& student){
+	while (true) {
+		//调用子菜单
+		student->operMenu();
+		Student* stu = (Student*)student;
+		int select = 0;
+		cin >> select;
+
+		if (select == 1) {//申请预约
+			stu->applyOrder();
+		}else if(select == 2){//查看自身预约
+			stu->showMyOrder();
+		}else if (select == 3) { //查看所有预约
+			stu->showAllOrder();
+		}else if(select == 4){//取消预约
+			stu->cancelOrder();
+		}else {//注销登录
+			delete student;//释放堆区数据
+			cout << "注销成功!" << endl;
+			system("pause");
+			system("cls");
+			return;
+		}
+	}
+}
+
+
 //进入管理员子菜单界面
 void managerMenu(Identlty * &person) {
 	while (true) {
@@ -86,8 +114,7 @@ void login(string fileName, int type) {
 				system("cls");
 				person = new Student(id, name, pwd);
 				//进入学生操作菜单
-
-				
+				studentMenu(person);
 				return;
 			}
 

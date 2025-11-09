@@ -1,5 +1,10 @@
 #pragma once
 #include "identlty.h"
+#include <string>
+#include <vector>
+#include "computerRoom.h"
+#include <fstream>
+#include "globalFile.h"
 
 class Student : public Identlty{
 public:
@@ -26,5 +31,8 @@ public:
 
 	//学生学号
 	int Id;
+
+	//机房信息
+	vector<ComputerRoom> vCom;
 };
 
