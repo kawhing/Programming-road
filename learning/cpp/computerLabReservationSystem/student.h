@@ -5,6 +5,7 @@
 #include "computerRoom.h"
 #include <fstream>
 #include "globalFile.h"
+#include "orderFile.h"
 
 class Student : public Identlty{
 public:
