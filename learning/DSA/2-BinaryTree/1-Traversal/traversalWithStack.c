@@ -9,8 +9,8 @@ int main(){
     preorderTraversal(tree);
     printf("\n中序遍历:\n");
     inorderTraversal(tree);
-    //printf("\n后序遍历:\n");
-    //postorderTraversal(tree);
+    printf("\n后序遍历:\n");
+    postorderTraversal(tree);
     
 
     treeFree(tree);

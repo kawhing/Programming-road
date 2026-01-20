@@ -146,6 +146,23 @@ void inorderTraversal(Tree *tree){
 void postorderTraversal(Tree *tree){
     if(!tree) return;
     Stack *stack = StackInit();
+    Tree *lastVisited = NULL;
+    while(tree || !stackIsEmpty(stack)){
+        while(tree){
+            stackPush(stack, tree);
+            tree = tree->left;
+        }
+        Tree *top = stackTop(stack);
+        if(top->right && top->right != lastVisited){
+            tree = top->right;
+        } else {
+            printf("%d -> ", top->data);
+            lastVisited = top;
+            stackPop(stack);
+        }
+    }
+    printf("\n");
+    stackFree(stack);
 }
 
 void treeFree(Tree *tree){
