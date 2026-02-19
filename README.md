@@ -1,49 +1,64 @@
-# Programming-road — Programming Learning and Growth Record
+# The Road to Programming — A Record of My Programming Learning and Growth
 
-Welcome to Programming-road, a repository for recording personal programming learning and growth. Through this repository, I will share the challenges I encountered, the problems I solved, the technical explorations, and self-reflection in the process of learning programming.
+Welcome to The Road to Programming, a repository for recording my personal programming learning and growth. Through this repository, I will share the challenges I've encountered, the problems I've solved, my technical explorations, and my self-reflections during my programming learning process.
 
 ## Main Content
 
-This repository mainly includes the following parts:
+This repository mainly includes the following sections:
 
-- Programming questions and answers: The source code of the questions I practiced on major online platforms (such as Luogu, Blue Bridge Cup, Niuke, etc.). The link to each question will be attached for your reference and discussion.
+- Programming Problems and Solutions: The source code of my coding challenges from various online platforms (such as Luogu, Lanqiao Cup, Nowcoder, etc.). Links to each problem will be provided directly or indirectly for reference and discussion. Problem lists will be saved in a separate folder.
 
-- Learning records and summaries: In addition to practicing questions, I will also record my gains and thoughts in learning data structures, algorithms, C++ and other technologies, and share some notes and tutorials I have compiled.
+- Links to my other open-source repositories
 
-- Personal growth and reflection: Not only the improvement of technology, I will also share my mental journey, learning insights and goal setting in the warehouse. You can see how I gradually grew from zero foundation to a programming enthusiast.
+- Learning Records and Summaries: In addition to solving problems, I will also record my gains and thoughts on learning data structures, algorithms, C++, and other technologies, sharing some notes and tutorials I've compiled.
 
-### Question link format
+- Personal Growth and Reflections: Beyond technical improvement, I will also share my personal journey, learning insights, and goal setting in this repository. You can see how I gradually grew from zero experience to a programming enthusiast.
 
-For your convenience, all programming question links will be attached in the following format:
+### Problem Link Format
 
-Luogu question link:
+To facilitate viewing and reference, the links to programming problems on Luogu and LeetCode are directly related to the problem number:
+
+Luogu Problem Link:
+
 ``` url
-https://www.luogu.com.cn/problem/ + <question number>
+https://www.luogu.com.cn/problem/ + <problem number>
 ```
 For example:
 ``` url
 https://www.luogu.com.cn/problem/P11041
 ```
-Niuke question link:
-Each Niuke question will also be attached with a direct link.
 
-## How to contribute
+LeetCode Problem Link:
 
-All programming enthusiasts are welcome to communicate with me, point out code problems, and make suggestions for improvement. You can participate in the following ways:
+``` url
+https://leetcode.cn/problems/ + <problem number>
+```
+For example:
 
-- Issues: Discuss issues, make suggestions or conduct technical exchanges in the Issues section of the repository.
+``` url
+https://leetcode.cn/problems/valid-parentheses/
+```
 
-- Pull Requests: If you find that there are areas that need improvement in the code or documents, you are welcome to submit Pull Requests. I will carefully review and refer to your changes.
+Nowcoder Problem Link: Each Nowcoder problem will also include a direct link.
 
-## Goals and expectations
 
-My goal is to record my learning process through this repository and share the experience with more people. I hope to make continuous progress through interaction with everyone and help more students who are learning programming find the right learning methods and solutions.
+## How to Contribute
+
+All programming enthusiasts are welcome to exchange ideas with me, point out code problems, and offer suggestions for improvement. You can participate in the following ways:
+
+- Issues: Discuss issues, offer suggestions, or engage in technical exchanges in the Issues section of the repository.
+
+- Pull Requests: If you find areas for improvement in the code or documentation, please submit Pull Requests. I will carefully review and consider your modifications.
+
+## Goals and Expectations
+
+My goal is to document my learning process through this repository and share my experiences with more people. I hope to continuously improve through interaction with everyone and help more students learning programming find suitable learning methods and solutions.
 
 ## Updates and Maintenance
-This repository will be updated regularly and the content will continue to be enriched. Although there is no fixed schedule for updates, I will try my best to stay active and submit my programming problem solutions, study notes, and other useful resources as I please.
+This repository will be updated regularly, and the content will be continuously enriched. Although updates may not have a fixed schedule, I will try my best to remain active and submit my programming solutions, study notes, and other useful resources as opportunities arise.
 
-## Open Source Agreement
+## Open Source License
 
-This repository uses the [MIT Agreement](./LICENSE). You are free to use, modify, and share the code and content here, but please keep the original author's signature and license information.
+This repository is licensed under the [MIT License](./LICENSE). You are free to use, modify, and share the code and content here, but please retain the original author's attribution and license information.
 
 ---
