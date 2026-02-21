@@ -1,5 +1,5 @@
 char* addBinary(char* a, char* b) {
-int len1 = strlen(a);
+    int len1 = strlen(a);
     int len2 = strlen(b);
     int maxlen = len1 > len2 ? len1 : len2;
     int carry = 0;

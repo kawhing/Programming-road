@@ -1,5 +1,3 @@
-#include <bits/stdc++.h>
-using namespace std;
 //14. 最长公共前缀
 class Solution {
 public:
