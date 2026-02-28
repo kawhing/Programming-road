@@ -1,5 +1,8 @@
 #pragma once
 #include "identlty.h"
+#include <string>
+#include "orderFile.h"
+#include <vector>
 class Teacher :public Identlty{
 public:
 	//Ä¬ÈÏ¹¹Ôì

@@ -149,7 +149,7 @@ void Student::showAllOrder() {
 		// 利用 atoi(const char*) 转 int
 		if (atoi(of.orderData[i]["stuId"].c_str()) == this->Id) {
 			cout << "预约日期: 周" << of.orderData[i]["date"];
-			cout << " 时段: " << (of.orderData[i]["interval"] == "1") ? "上午" : "下午";
+			cout << " 时间段: " << (of.orderData[i]["interval"] == "1" ? "上午" : "下午");
 			cout << " 学号: " << of.orderData[i]["stuId"];
 			cout << " 姓名: " << of.orderData[i]["stuName"];
 			cout << " 机房号: " << of.orderData[i]["roodId"];
